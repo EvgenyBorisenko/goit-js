@@ -12,5 +12,10 @@ const user = {
 };
 user.mood = "happy",
 user.hobby = 'javascript' ,
-user.premium = 'false';
+user.premium = false;
 console.log(user);
+
+for(const userKey of Object.keys(user)){
+  // userKey + ": " user + user[userKey]
+  console.log( `${userKey}: ${user[userKey]}`);
+}
