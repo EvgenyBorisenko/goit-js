@@ -13,12 +13,12 @@ const invokeInventoryOperation = function(itemName, inventoryAction) {
   inventoryAction(itemName);
 };
 
-invokeInventoryOperation('Аптечка', inventory.add);
+invokeInventoryOperation('Аптечка', inventory.add.bind(inventory));
 // Invoking add opeartion on Аптечка
 
 console.log(inventory.items); // ['Монорельса', 'Фильтр', 'Аптечка']
 
-invokeInventoryOperation('Фильтр', inventory.remove);
+invokeInventoryOperation('Фильтр', inventory.remove.bind(inventory));
 // Invoking remove opeartion on Фильтр
 
 console.log(inventory.items); // ['Монорельса', 'Аптечка']
