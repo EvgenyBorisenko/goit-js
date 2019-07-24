@@ -13,7 +13,7 @@ class User {
 
   }
   getInfo(){
-    console.log(`User ${this.name} is ${this.age} years old // and has ${this.followers} followers`);
+    console.log(`User ${this.name} is ${this.age} years old and has ${this.followers} followers`);
   }
 }
 const mango = new User({ name: 'Mango', age: 2, followers: 20 });
