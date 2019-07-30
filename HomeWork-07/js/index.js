@@ -29,7 +29,6 @@ function testJavaScript({ title, questions }) {
       testInput.setAttribute("name", `answer_${numberChoise + 1}`);
       testInput.setAttribute("value", id);
       testInput.setAttribute("required", true); // окно которое выводит "вы выбрали не все обьекты "
-     
 
       testLabel.prepend(testInput);
       testItem.append(testLabel);
@@ -37,7 +36,6 @@ function testJavaScript({ title, questions }) {
       testQuestion.append(testList);
     });
     section.append(testQuestion, testList);
-    
     mainTitle.append(section);
   });
   form.prepend(mainTitle);
@@ -49,15 +47,20 @@ form.addEventListener("submit", function(event) {
   const userAnswers = [...document.querySelectorAll("input:checked")].map(el =>
     Number(el.value)
   );
+  const textAlert = document.createElement("p");
+  textAlert.classList.add("userAlertUnswer");
   const rihghtAnswer = quizData.questions.map(el => el.answer);
   let counter = 0;
   for (let i = 0; i < userAnswers.length; i++) {
     if (rihghtAnswer[i] === userAnswers[i]) {   
       counter = counter + 1;
-      return alert(`Вы ответили правильно на ${counter}`);
+      // return p(`Вы ответили правильно на ${counter}`);
     }
   }
   console.log(counter);
+  
+  form.append(textAlert);
+  textAlert.textContent = `Вы дали ${counter} правельных ответов.`;
 
 });
 
