@@ -52,15 +52,13 @@ form.addEventListener("submit", function(event) {
   const rihghtAnswer = quizData.questions.map(el => el.answer);
   let counter = 0;
   for (let i = 0; i < userAnswers.length; i++) {
-    if (rihghtAnswer[i] === userAnswers[i]) {   
+    if (rihghtAnswer[i] === userAnswers[i]) {
       counter = counter + 1;
       // return p(`Вы ответили правильно на ${counter}`);
     }
   }
   console.log(counter);
-  
+
   form.append(textAlert);
   textAlert.textContent = `Вы дали ${counter} правельных ответов.`;
-
 });
-
