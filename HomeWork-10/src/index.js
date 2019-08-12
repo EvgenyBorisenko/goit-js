@@ -5,15 +5,11 @@ import menuTemplaite from './templates/template.hbs';
 const restoranMenu = document.querySelector('.menu');
 const body = document.body;
 
-// console.log('menuTemplaite() :', menuTemplaite(menuJson[2]));
-
 let markup = menuJson
   .map(el => {
     return menuTemplaite(el);
   })
   .join('');
-
-console.log('markup ', markup);
 
 restoranMenu.insertAdjacentHTML('afterbegin', markup);
 
