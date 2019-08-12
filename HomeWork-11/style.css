@@ -1,0 +1,35 @@
+body{
+  width: 1200px;
+  margin: 0 auto;
+}
+.timer{
+  position: absolute;
+  left: 25%; top: 50%;
+  transform: translate(-50% -50%);
+  display: flex;
+  justify-content: space-evenly;
+  width: 835px;
+}
+
+.field{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 135px;
+  height: 110px;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.value{
+
+  font-size: 64px;
+  color: white;
+  text-align: center;
+}
+.label{
+  margin: auto;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+}
